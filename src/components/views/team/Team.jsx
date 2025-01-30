@@ -51,7 +51,7 @@ const Team = () => {
         <ButtonPrimary text="Add Team" onClick={() => setIsModalOpen(true)} />
       </div>
 
-      <div className="max-w-[25rem] md:max-w-full mt-4 shadow">
+      <div className="max-w-[23rem] md:max-w-full mt-4 shadow">
         <DataTable
           columns={columns}
           data={teamData}
