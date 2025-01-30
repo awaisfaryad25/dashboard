@@ -18,7 +18,7 @@ const teamData = [
 ];
 
 const columns = [
-  { name: "Image", selector: (row) => <img src={row.image} alt={row.name} className="size-10 object-cover rounded-full" />, sortable: false, width: "80px"},
+  { name: "Image", selector: (row) => <img src={row.image} alt={row.name} className="size-10 object-cover rounded-full" />, sortable: false, width: "px"},
   { name: "Name", selector: (row) => row.name, sortable: false,},
   { name: "Role", selector: (row) => row.role, sortable: false,},
   { name: "Profile Link", selector: (row) => <a href={row.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">View Profile</a>, sortable: false,},
@@ -37,7 +37,7 @@ const columns = [
     ignoreRowClick: true,
     allowOverflow: true,
     button: true,
-    minWidth: "100px",
+    // minWidth: "100px",
   },
 ];
 
@@ -51,7 +51,7 @@ const Team = () => {
         <ButtonPrimary text="Add Team" onClick={() => setIsModalOpen(true)} />
       </div>
 
-      <div className="max-w-[22.5rem] md:max-w-full mt-4 shadow">
+      <div className="max-w-[22rem] md:max-w-full mt-4 shadow">
         <DataTable
           columns={columns}
           data={teamData}
