@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import DataTable from "react-data-table-component";
 import ButtonPrimary from "../../globalComponents/subComponents/ButtonPrimary";
 import { FaEdit, FaTrash } from "react-icons/fa";
-import { Dialog, DialogContent } from "@mui/material";
 import AddTeam from "./AddTeam";
 
 import awais from "../../../assets/team/awais.jpg";
@@ -10,6 +9,7 @@ import tina from "../../../assets/team/tina.png";
 import john from "../../../assets/team/john.png";
 import lana from "../../../assets/team/lana.png";
 import abrahm from "../../../assets/team/abrahm.png";
+import ImagePopup from "../../globalComponents/subComponents/ImagePopup";
 
 const teamData = [
   { id: 1, name: "Awais Faryad", role: "Frontend Developer", image: awais, link: "https://linkedin.com/in/awaisfaryad" },
@@ -87,12 +87,7 @@ const Team = () => {
         />
       </div>
 
-      <Dialog open={!!selectedImage} onClose={() => setSelectedImage(null)}>
-        <DialogContent>
-          <img src={selectedImage} alt="Selected Popup" className="w-full max-w-80 h-96 rounded object-contain" />
-        </DialogContent>
-      </Dialog>
-
+      <ImagePopup open={!!selectedImage} image={selectedImage} onClose={() => setSelectedImage(null)} />
       {isModalOpen && <AddTeam onClose={() => setIsModalOpen(false)} />}
     </div>
   );
