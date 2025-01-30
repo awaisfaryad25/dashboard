@@ -21,11 +21,11 @@ const Dashboard = () => {
   }, [activeTab]);
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-scree flex flex-col">
       <Navbar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} activeTab={activeTab} />
       <div className="flex flex-1">
         <SideBar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} activeTab={activeTab} setActiveTab={setActiveTab}/>
-        <div className="flex-1 p-3 bg-[var(--background)] min-h-screen flex flex-col">
+        <div className="flex-1 p-3 bg-[var(--background)] h-full max-h-screen flex flex-col">
           <Outlet />
           <div className="">
             {/* <Footer /> */}

@@ -15,9 +15,9 @@ const SideBar = ({ sidebarOpen, setSidebarOpen, activeTab, setActiveTab }) => {
 
   return (
     <div 
-      className={`w-60 bg-gradient-to-b from-[var(--secondary)]  to-[var(--primary)] text-white flex flex-col justify-between absolute  md:top-0 left-0 h-full transition-all duration-300 z-30 ${
+      className={`w-60 bg-gradient-to-b from-[var(--secondary)]  to-[var(--primary)] text-white flex flex-col justify-between absolute  md:top-0 left-0 min-h-screen transition-all duration-300 z-30 ${
         sidebarOpen ? "translate-x-0 top-15" : "-translate-x-full "
-      } md:translate-x-0 md:relative md:h-auto`}
+      } md:translate-x-0 md:relative md:h-auto `}
     >
       <div>
         <ul className="pl-4 pt-3 space-y-2">
