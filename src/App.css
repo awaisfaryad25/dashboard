@@ -1,0 +1,11 @@
+/* styles.css */
+:root {
+    --primary: #89EA5F;
+    --secondary: #163300;
+    --background: #F3F4F6;
+    --textGray: #888888;
+    --background: #F9FAFB;
+    --body-font: 'Arial', sans-serif;
+    --heading-font: 'Roboto', sans-serif;
+  }
+  
