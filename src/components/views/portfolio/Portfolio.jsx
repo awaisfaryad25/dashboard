@@ -3,7 +3,6 @@ import ButtonPrimary from "../../globalComponents/subComponents/ButtonPrimary";
 import { FaFolderOpen } from "react-icons/fa";
 
 const Portfolio = () => {
-  // Sample data — replace with API data later
   const projects = [
     {
       id: 1,
@@ -44,19 +43,12 @@ const Portfolio = () => {
               key={project.id}
               className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition"
             >
-              {/* Image */}
-              <img
-                src={project.image}
-                alt={project.name}
-                className="w-full h-48 object-cover"
-              />
+              <img src={project.image} alt={project.name} className="w-full h-48 object-cover"/>
 
               {/* Content */}
               <div className="p-4">
                 <h3 className="text-lg font-semibold">{project.name}</h3>
-                <p className="text-gray-500 text-sm mb-3">
-                  {project.description}
-                </p>
+                <p className="text-gray-500 text-sm mb-3"> {project.description} </p>
                 <span
                   className={`inline-block px-3 py-1 text-xs rounded-full ${
                     project.status === "Completed"
