@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../../globalComponents/Navbar";
+import Footer from "../../globalComponents/Footer";
 import SideBar from "../../globalComponents/SideBar";
 
 const Dashboard = () => {
@@ -28,7 +29,7 @@ const Dashboard = () => {
         <div className="flex-1 p-3 bg-[var(--background)] h-full max-h-screen flex flex-col">
           <Outlet />
           <div className="">
-            {/* <Footer /> */}
+            <Footer />
           </div>
         </div>
       </div>
