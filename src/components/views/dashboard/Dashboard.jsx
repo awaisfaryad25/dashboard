@@ -33,13 +33,6 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
-    // <div className="flex flex-1">
-    //   <SideBar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} activeTab={activeTab} setActiveTab={setActiveTab}/>
-    //   <div className="flex-1 bg-textSecondary min-h-screen flex flex-col">
-    //     <Navbar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} activeTab={activeTab} />
-    //     <Outlet />
-    //   </div>
-    // </div>
   );
 };
 
