@@ -1,5 +1,6 @@
 import ButtonPrimary from "../../globalComponents/subComponents/ButtonPrimary";
 import { FaFolderOpen } from "react-icons/fa";
+import Ecom from "../../../assets/portfolio/E-Com.png";
 
 const Portfolio = () => {
   const projects = [
@@ -7,7 +8,7 @@ const Portfolio = () => {
       id: 1,
       name: "E-Commerce Website",
       description: "Full-stack shop built with React & Node.js",
-      image: "https://via.placeholder.com/300x200",
+      image: Ecom,
       status: "Completed"
     },
     {
@@ -42,7 +43,7 @@ const Portfolio = () => {
               key={project.id}
               className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition"
             >
-              <img src={project.image} alt={project.name} className="w-full h-48 object-cover"/>
+              <img src={project.image} alt={project.name} className="w-full h-60 object-fill"/>
 
               {/* Content */}
               <div className="p-4">
@@ -50,9 +51,7 @@ const Portfolio = () => {
                 <p className="text-gray-500 text-sm mb-3"> {project.description} </p>
                 <span
                   className={`inline-block px-3 py-1 text-xs rounded-full ${
-                    project.status === "Completed"
-                      ? "bg-green-100 text-green-600"
-                      : "bg-yellow-100 text-yellow-600"
+                    project.status === "Completed" ? "bg-green-100 text-green-600" : "bg-yellow-100 text-yellow-600"
                   }`}
                 >
                   {project.status}
