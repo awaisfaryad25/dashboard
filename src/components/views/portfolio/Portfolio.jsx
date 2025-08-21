@@ -1,6 +1,8 @@
 import ButtonPrimary from "../../globalComponents/subComponents/ButtonPrimary";
 import { FaFolderOpen } from "react-icons/fa";
 import Ecom from "../../../assets/portfolio/E-Com.png";
+import hand from "../../../assets/portfolio/hand.jpeg";
+import system from "../../../assets/portfolio/system.jpg";
 
 const Portfolio = () => {
   const projects = [
@@ -15,14 +17,14 @@ const Portfolio = () => {
       id: 2,
       name: "Mobile Banking App",
       description: "Secure mobile banking platform for iOS & Android",
-      image: "https://via.placeholder.com/300x200",
+      image: hand,
       status: "In Progress"
     },
     {
       id: 3,
       name: "Portfolio Website",
       description: "Personal portfolio showcasing UI/UX designs",
-      image: "https://via.placeholder.com/300x200",
+      image: system,
       status: "Completed"
     }
   ];
