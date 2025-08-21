@@ -1,4 +1,3 @@
-import React from "react";
 import ButtonPrimary from "../../globalComponents/subComponents/ButtonPrimary";
 import { FaFolderOpen } from "react-icons/fa";
 
@@ -28,15 +27,15 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 p-4 lg:p-6 space-y-6">
       {/* Header */}
-      <div className="p-4 bg-[#DBF8CF] shadow bg-opacity-40 flex items-center justify-between border-b">
+      <div className="p-4 bg-white rounded-lg shadow bg-opacity-40 flex items-center justify-between border-l-2">
         <h2 className="font-semibold text-lg">Portfolio</h2>
         <ButtonPrimary text="Add Project" />
       </div>
 
       {/* Projects Grid */}
-      <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.length > 0 ? (
           projects.map((project) => (
             <div
