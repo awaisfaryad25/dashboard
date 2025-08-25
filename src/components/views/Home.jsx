@@ -30,7 +30,16 @@ const Home = () => {
     }
   ];
 
-
+  // Sales data for line chart
+  const salesData = [
+    { name: "Jan", sales: 4000, revenue: 2400 },
+    { name: "Feb", sales: 3000, revenue: 1398 },
+    { name: "Mar", sales: 2000, revenue: 9800 },
+    { name: "Apr", sales: 2780, revenue: 3908 },
+    { name: "May", sales: 1890, revenue: 4800 },
+    { name: "Jun", sales: 2390, revenue: 3800 },
+    { name: "Jul", sales: 3490, revenue: 4300 },
+  ];
 
   // Revenue distribution data for pie chart
   const revenueData = [
@@ -86,7 +95,29 @@ const Home = () => {
           </ResponsiveContainer>
         </div>
         
-
+        {/* Revenue Distribution Chart */}
+        <div className="bg-white p-4 rounded-lg shadow-md">
+          <h2 className="text-lg font-semibold mb-4">Revenue Distribution</h2>
+          <ResponsiveContainer width="100%" height={300}>
+            <PieChart>
+              <Pie
+                data={revenueData}
+                cx="50%"
+                cy="50%"
+                labelLine={false}
+                outerRadius={80}
+                fill="#8884d8"
+                dataKey="value"
+                label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+              >
+                {revenueData.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                ))}
+              </Pie>
+              <Tooltip />
+            </PieChart>
+          </ResponsiveContainer>
+        </div>
       </div>
     </div>
   );
